@@ -15,3 +15,7 @@ Usage
 `git update-branch`
 
 Merge your current branch with the latest origin/develop and prune branches on the origin
+
+`git checkout-modified-files`
+
+Checkout all modified files that are not staged in the current directory
