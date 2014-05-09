@@ -1,7 +1,7 @@
 git-easymode
 ===============
 
-A collection of scripts to make life easier for git users
+A collection of scripts to make life easier for git users using gitflow
 
 Installation
 ===============
@@ -12,4 +12,6 @@ If you don't want to install to $HOME/bin, cp git-\* to another location in $PAT
 
 Usage
 ===============
-TODO
+`git update-branch`
+
+Merge your current branch with the latest origin/develop and prune branches on the origin
