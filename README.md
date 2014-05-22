@@ -19,3 +19,7 @@ Merge your current branch with the latest origin/develop and prune branches on t
 `git checkout-modified-files`
 
 Checkout all modified files that are not staged in the current directory
+
+`git ls-assume-unchanged`
+
+List all files marked as --assume-unchanged
