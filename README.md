@@ -23,3 +23,7 @@ Checkout all modified files that are not staged in the current directory
 `git ls-assume-unchanged`
 
 List all files marked as --assume-unchanged
+
+`git new-branch`
+
+Create a new branch tracking origin/develop and push it up to the origin
