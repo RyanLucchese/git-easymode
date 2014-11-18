@@ -5,6 +5,11 @@ if [ "`git rev-parse --is-inside-work-tree`" != "true" ]; then
 	exit 1
 fi
 
+# validate arguments
+if [ -z "$1" -o -n "$2" ]; then
+	echo "Usage: git new-branch branch_name"
+	exit 0
+fi
 git fetch
 git checkout -b $1 origin/develop
 git push -u origin $1
