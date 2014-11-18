@@ -11,6 +11,18 @@ if [ -z "${1}" -o -n "${2}" ]; then
 	exit 0
 fi
 
+# make sure local branch doesn't already exist
+if $(git show-ref --verify --quiet refs/heads/${1}); then
+	echo "Error: Local branch $1 already exists! Please choose a different branch name."
+	exit 1
+fi
+
+# make sure remote branch doesn't already exist
+if $(git show-ref --verify --quiet refs/remotes/origin/${1}); then
+	echo "Error: Remote branch $1 already exists! Please choose a different branch name."
+	exit 1
+fi
+
 # create a new branch tracking origin/develop and push it up to the origin
 git fetch
 git checkout -b $1 origin/develop
