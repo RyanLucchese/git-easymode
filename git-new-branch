@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# make sure we are in a git repository
+if [ "`git rev-parse --is-inside-work-tree`" != "true" ]; then
+	exit 1
+fi
+
+git fetch
+git checkout -b $1 origin/develop
+git push -u origin $1
