@@ -10,6 +10,8 @@ if [ -z "$1" -o -n "$2" ]; then
 	echo "Usage: git new-branch branch_name"
 	exit 0
 fi
+
+# create a new branch tracking origin/develop and push it up to the origin
 git fetch
 git checkout -b $1 origin/develop
 git push -u origin $1
