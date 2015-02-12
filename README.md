@@ -27,3 +27,7 @@ Checkout all modified files that are not staged in the current directory
 `git ls-assume-unchanged`
 
 List all files marked as --assume-unchanged
+
+`git whose-branch`
+
+Find out who authored a certain branch
