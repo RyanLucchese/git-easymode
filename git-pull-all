@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# make sure we are in a git repository
+if [ "$(git rev-parse --is-inside-work-tree)" != "true" ]; then
+	exit 1
+fi
+
+# validate arguments
+if [ -n "${1}" ]; then
+	echo "Usage: git pull-all"
+	exit 0
+fi
+
+# change to every git repo dir and execute git pull
+for i in $(find . -name ".git" -type d); do
+	repo_path="${i%/.git}"
+	pushd ${repo_path} > /dev/null
+	git pull
+	popd > /dev/null
+done
+
+exit 1

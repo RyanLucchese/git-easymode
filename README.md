@@ -20,6 +20,10 @@ Create a new branch tracking origin/develop and push it up to the origin
 
 Merge your current branch with the latest origin/develop and prune branches on the origin
 
+`git pull-all`
+
+Find every git repository below the current directory and execute git pull on it
+
 `git checkout-modified-files`
 
 Checkout all modified files that are not staged in the current directory
