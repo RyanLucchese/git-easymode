@@ -15,7 +15,7 @@ fi
 branches="$(git for-each-ref --format='%(authorname)%09%(refname)' | tr ' ' '\001' | tr '\t' '\002')"
 for i in ${branches[@]}; do
 	author_ref_pair=( $(echo $i | tr '\002' ' ') )
-	if [ "${author_ref_pair[1]}" == "refs/remotes/origin/${1}" ]; then
+	if [[ "${author_ref_pair[1]}" == *"${1}" ]]; then
 		echo "$(echo ${author_ref_pair[0]} | tr '\001' ' ')"
 		exit 0
 	fi
