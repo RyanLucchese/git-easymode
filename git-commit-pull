@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# make sure we are in a git repository
+if [ "$(git rev-parse --is-inside-work-tree)" != "true" ]; then
+	exit 1
+fi
+
+# validate arguments
+if [ -z "${1}" -o -n "${2}" ]; then
+	echo "Usage: git commit-pull message"
+	exit 0
+fi
+
+# commit all staged changes with a message and pull
+git commit -am $1
+git pull
