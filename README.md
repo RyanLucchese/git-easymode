@@ -35,3 +35,7 @@ List all files marked as --assume-unchanged
 `git whose-branch`
 
 Find out who authored a certain branch
+
+`git branch-diff`
+
+Diff the commits on a branch against the most recent common ancestor with another branch
