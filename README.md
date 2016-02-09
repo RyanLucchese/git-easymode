@@ -39,3 +39,15 @@ Find out who authored a certain branch
 `git diffbase`
 
 Diff the commits on a branch against the most recent common ancestor with another branch
+
+Bash Completion
+===============
+
+A script for doing bash completions is provided in the install directory, $HOME/bin. If
+you want to use bash completions, you need to add:
+
+`source $HOME/bin/git-easymode-completions.bash`
+
+to your ~/.bashrc file. You must already have the bash completions for other git commands
+functioning.
+
