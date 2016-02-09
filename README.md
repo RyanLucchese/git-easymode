@@ -32,10 +32,10 @@ Checkout all modified files that are not staged in the current directory
 
 List all files marked as --assume-unchanged
 
-`git whose-branch`
+`git whosebranch`
 
 Find out who authored a certain branch
 
-`git branch-diff`
+`git diffbase`
 
 Diff the commits on a branch against the most recent common ancestor with another branch
