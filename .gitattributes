@@ -1,2 +1,3 @@
 *.sh eol=lf
 git-* eol=lf
+README.md eol=lf
