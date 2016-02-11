@@ -40,6 +40,10 @@ Find out who authored a certain branch
 
 Diff the commits on a branch against the most recent common ancestor with another branch
 
+`git git [command]`
+
+Runs `git [command]` if you accidentally type git twice. Works for any number of preceeding git commands.
+
 Bash Completion
 ===============
 
